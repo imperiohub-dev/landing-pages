@@ -1,0 +1,12 @@
+// ============================================
+// Main SCSS Entry Point
+// ============================================
+
+// 1. Abstracts (variables, mixins, functions)
+@use "./abstracts" as *;
+
+// 2. Base styles (reset, typography)
+@use "./base";
+
+// 3. UI Components
+@use "./components";
