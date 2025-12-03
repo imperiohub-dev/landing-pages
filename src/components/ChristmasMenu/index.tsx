@@ -1,5 +1,5 @@
-import './ChristmasMenu.css';
-import logoMenu from '../../assets/logo-menu.png';
+import "./ChristmasMenu.css";
+import logoMenu from "../../assets/logo-menu.png";
 
 interface MenuItem {
   name: string;
@@ -24,103 +24,131 @@ interface Combo {
 const ChristmasMenu = () => {
   const menuSections: MenuSection[] = [
     {
-      title: 'Lasañas',
-      emoji: '🍝',
+      title: "Lasañas",
+      emoji: "🍝",
       items: [
-        { name: 'Lasaña de Res', priceSmall: 'RD$1,300', priceLarge: 'RD$2,000' },
-        { name: 'Lasaña de Pollo', priceSmall: 'RD$1,500', priceLarge: 'RD$2,300' },
+        {
+          name: "Lasaña de Res",
+          priceSmall: "RD$1,300",
+          priceLarge: "RD$2,000",
+        },
+        {
+          name: "Lasaña de Pollo",
+          priceSmall: "RD$1,500",
+          priceLarge: "RD$2,300",
+        },
       ],
     },
     {
-      title: 'Pastelones',
-      emoji: '🍽️',
+      title: "Pastelones",
+      emoji: "🍽️",
       items: [
-        { name: 'Pastelón de Plátano Maduro', priceSmall: 'RD$1,200', priceLarge: 'RD$1,900' },
-        { name: 'Pastelón de Papa', priceSmall: 'RD$1,000', priceLarge: 'RD$1,700' },
+        {
+          name: "Pastelón de Plátano Maduro",
+          priceSmall: "RD$1,200",
+          priceLarge: "RD$1,900",
+        },
+        {
+          name: "Pastelón de Papa",
+          priceSmall: "RD$1,000",
+          priceLarge: "RD$1,700",
+        },
       ],
     },
     {
-      title: 'Ensaladas',
-      emoji: '🥗',
+      title: "Ensaladas",
+      emoji: "🥗",
       items: [
-        { name: 'Ensalada Rusa', details: 'blanca, roja o mixta', price: 'RD$800' },
-        { name: 'Ensalada de Pasta', price: 'RD$800' },
+        {
+          name: "Ensalada Rusa",
+          details: "blanca, roja o mixta",
+          price: "RD$800",
+        },
+        { name: "Ensalada de Pasta", price: "RD$800" },
       ],
     },
     {
-      title: 'Arroces',
-      emoji: '🍚',
+      title: "Arroces",
+      emoji: "🍚",
       items: [
-        { name: 'Arroz Navideño con nueces', details: '5 lb', price: 'RD$900' },
-        { name: 'Moro de Guandules', details: '5 lb', price: 'RD$750' },
+        { name: "Arroz Navideño con nueces", details: "5 lb", price: "RD$900" },
+        { name: "Moro de Guandules", details: "5 lb", price: "RD$750" },
       ],
     },
     {
-      title: 'Carnes',
-      emoji: '🍖',
+      title: "Carnes",
+      emoji: "🍖",
       items: [
-        { name: 'Cerdo asado por libra', details: 'mínimo 5 lb', price: 'RD$600' },
-        { name: 'Pavo o Pollo en Salsa Ragú', details: 'Bandeja pequeña', price: 'RD$1,100' },
+        {
+          name: "Cerdo asado por libra",
+          details: "mínimo 5 lb",
+          price: "RD$600",
+        },
+        {
+          name: "Pavo o Pollo en Salsa Ragú",
+          details: "Bandeja pequeña",
+          price: "RD$1,100",
+        },
       ],
     },
     {
-      title: 'Otros',
-      emoji: '⭐',
+      title: "Otros",
+      emoji: "⭐",
       items: [
-        { name: 'Niños Envueltos', details: '12 unidades', price: 'RD$900' },
+        { name: "Niños Envueltos", details: "12 unidades", price: "RD$900" },
       ],
     },
   ];
 
   const combos: Combo[] = [
     {
-      name: 'Combo 1 – Tradicional',
+      name: "Combo 1 – Tradicional",
       items: [
-        'Lasaña de Res (pequeña)',
-        'Ensalada Rusa',
-        'Arroz Navideño (5 lb)',
+        "Lasaña de Res (pequeña)",
+        "Ensalada Rusa",
+        "Arroz Navideño (5 lb)",
       ],
-      price: 'RD$2,800',
+      price: "RD$2,800",
     },
     {
-      name: 'Combo 2 – Cena Premium',
+      name: "Combo 2 – Cena Premium",
       items: [
-        'Lasaña de Pollo (pequeña)',
-        'Ensalada de Pasta',
-        'Moro de Guandules (5 lb)',
-        '2 lb de Cerdo Asado',
+        "Lasaña de Pollo (pequeña)",
+        "Ensalada de Pasta",
+        "Moro de Guandules (5 lb)",
+        "2 lb de Cerdo Asado",
       ],
-      price: 'RD$4,300',
+      price: "RD$4,300",
     },
     {
-      name: 'Combo 3 – Familia Grande',
+      name: "Combo 3 – Familia Grande",
       items: [
-        'Lasaña de Res (grande)',
-        'Ensalada Rusa',
-        'Moro de Guandules (5 lb)',
-        'Niños Envueltos (12u)',
+        "Lasaña de Res (grande)",
+        "Ensalada Rusa",
+        "Moro de Guandules (5 lb)",
+        "Niños Envueltos (12u)",
       ],
-      price: 'RD$3,950',
+      price: "RD$3,950",
     },
     {
-      name: 'Combo 4 – Navideño Especial',
+      name: "Combo 4 – Navideño Especial",
       items: [
-        'Lasaña de Pollo (grande)',
-        'Ensalada Rusa',
-        'Arroz Navideño (5 lb)',
-        'Pavo/Pollo en Salsa Ragú',
+        "Lasaña de Pollo (grande)",
+        "Ensalada Rusa",
+        "Arroz Navideño (5 lb)",
+        "Pavo/Pollo en Salsa Ragú",
       ],
-      price: 'RD$5,000',
+      price: "RD$5,000",
     },
     {
-      name: 'Combo 5 – Antojos Mixtos',
+      name: "Combo 5 – Antojos Mixtos",
       items: [
-        'Pastelón de Plátano (pequeño)',
-        'Pastelón de Papa (pequeño)',
-        'Ensalada de Pasta',
-        'Arroz Navideño (5 lb)',
+        "Pastelón de Plátano (pequeño)",
+        "Pastelón de Papa (pequeño)",
+        "Ensalada de Pasta",
+        "Arroz Navideño (5 lb)",
       ],
-      price: 'RD$3,700',
+      price: "RD$3,700",
     },
   ];
 
@@ -129,10 +157,14 @@ const ChristmasMenu = () => {
       <div className="menu-container">
         <div className="header">
           <div className="logo-space">
-            <img src={logoMenu} alt="La Cocina de Lucy" className="logo-image" />
+            <img
+              src={logoMenu}
+              alt="La Cocina de Lucy"
+              className="logo-image"
+            />
           </div>
           <h1>La Cocina de Lucy</h1>
-          <h2>Menú Navideño 2024</h2>
+          <h2>Menú Navideño 2025</h2>
           <p>✨ SABOR Y TRADICIÓN ✨</p>
         </div>
 
@@ -149,14 +181,18 @@ const ChristmasMenu = () => {
                   <div key={itemIndex} className="menu-item">
                     <div>
                       <div className="item-name">{item.name}</div>
-                      {item.details && <div className="item-details">{item.details}</div>}
+                      {item.details && (
+                        <div className="item-details">{item.details}</div>
+                      )}
                     </div>
                     <div className="item-price">
                       {item.priceSmall && item.priceLarge ? (
                         <>
-                          <span className="price-label">Pequeña:</span> {item.priceSmall}{' '}
-                          <span className="price-separator">|</span>{' '}
-                          <span className="price-label">Grande:</span> {item.priceLarge}
+                          <span className="price-label">Pequeña:</span>{" "}
+                          {item.priceSmall}{" "}
+                          <span className="price-separator">|</span>{" "}
+                          <span className="price-label">Grande:</span>{" "}
+                          {item.priceLarge}
                         </>
                       ) : (
                         item.price
@@ -193,7 +229,8 @@ const ChristmasMenu = () => {
             📞 Pedidos: <span className="highlight">849-535-7777</span>
           </p>
           <p className="footer-text">
-            📅 Encargos con <span className="highlight">48 horas de anticipación</span>
+            📅 Encargos con{" "}
+            <span className="highlight">48 horas de anticipación</span>
           </p>
           <p className="footer-text">
             💰 Se requiere un <span className="highlight">50% de adelanto</span>
@@ -203,13 +240,21 @@ const ChristmasMenu = () => {
             <a href="tel:8495357777" className="cta-button primary">
               📞 Llamar Ahora
             </a>
-            <a href="https://wa.me/18495357777" target="_blank" rel="noopener noreferrer" className="cta-button">
+            <a
+              href="https://wa.me/18495357777"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cta-button"
+            >
               💬 WhatsApp
             </a>
           </div>
 
           <div className="decorative-line"></div>
-          <p className="footer-text" style={{ marginTop: '20px', fontSize: '14px' }}>
+          <p
+            className="footer-text"
+            style={{ marginTop: "20px", fontSize: "14px" }}
+          >
             ¡Haz de tu Navidad un momento especial con La Cocina de Lucy! 🎄✨
           </p>
         </div>
