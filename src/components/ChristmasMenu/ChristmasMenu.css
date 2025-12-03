@@ -1,10 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap");
 
 .menu-body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
   background: linear-gradient(135deg, #8b0000 0%, #dc143c 100%);
   padding: 20px;
   min-height: 100vh;
+  line-height: 1.6;
 }
 
 .menu-container {
@@ -49,94 +51,91 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 20rem;
+  width: 100%;
+  max-width: 320px;
   height: 20rem;
-  margin-left: 35%;
-  /* width: 120px;
-  height: 120px;
   margin: 0 auto 20px;
-  border: 3px dashed rgba(255, 215, 0, 0.5);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(255, 255, 255, 0.1);
-  color: rgba(255, 215, 0, 0.7);
-  font-size: 14px;
-  text-align: center;
-  padding: 10px;
-  overflow: hidden; */
 }
 
 .logo-image {
-  /* width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%; */
+  width: 100%;
+  height: auto;
+  max-width: 320px;
+  object-fit: contain;
 }
 
 .header h1 {
-  font-family: "Playfair Display", serif;
+  font-family: "Cormorant Garamond", serif;
   color: #ffd700;
-  font-size: 48px;
+  font-size: 52px;
   margin-bottom: 10px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
   font-weight: 700;
+  letter-spacing: 1px;
 }
 
 .header h2 {
-  font-family: "Playfair Display", serif;
+  font-family: "Cormorant Garamond", serif;
   color: white;
-  font-size: 32px;
+  font-size: 34px;
   font-weight: 400;
   margin-bottom: 15px;
+  letter-spacing: 0.5px;
 }
 
 .header p {
   color: #ffd700;
-  font-size: 16px;
-  font-weight: 300;
-  letter-spacing: 2px;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 3px;
 }
 
 .content {
-  padding: 40px 30px;
+  padding: 50px 35px;
 }
 
 .section {
-  margin-bottom: 35px;
+  margin-bottom: 45px;
 }
 
 .section-title {
-  font-family: "Playfair Display", serif;
+  font-family: "Cormorant Garamond", serif;
   color: #8b0000;
-  font-size: 28px;
-  margin-bottom: 20px;
-  padding-bottom: 10px;
+  font-size: 32px;
+  margin-bottom: 25px;
+  padding-bottom: 12px;
   border-bottom: 3px solid #ffd700;
   display: inline-block;
   width: 100%;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
 .subsection {
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 
 .subsection-title {
-  font-family: "Playfair Display", serif;
+  font-family: "Cormorant Garamond", serif;
   color: #b22222;
-  font-size: 20px;
-  margin-bottom: 15px;
+  font-size: 22px;
+  margin-bottom: 18px;
   font-weight: 600;
+  letter-spacing: 0.3px;
 }
 
 .menu-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 0;
+  padding: 16px 0;
   border-bottom: 1px solid #f0e6e6;
   gap: 20px;
+  transition: padding 0.2s ease;
+}
+
+.menu-item:hover {
+  padding-left: 8px;
 }
 
 .menu-item:last-child {
@@ -145,16 +144,18 @@
 
 .item-name {
   flex: 1;
-  font-weight: 600;
-  color: #333;
+  font-weight: 500;
+  color: #2c2c2c;
   font-size: 16px;
+  letter-spacing: 0.2px;
 }
 
 .item-details {
-  color: #666;
+  color: #707070;
   font-size: 13px;
   font-style: italic;
-  margin-top: 3px;
+  margin-top: 4px;
+  font-weight: 300;
 }
 
 .item-price {
@@ -163,6 +164,7 @@
   font-size: 16px;
   white-space: nowrap;
   text-align: right;
+  letter-spacing: 0.3px;
 }
 
 .price-label {
@@ -180,9 +182,16 @@
   background: linear-gradient(135deg, #fff9f9 0%, #ffffff 100%);
   border: 2px solid #ffd700;
   border-radius: 15px;
-  padding: 20px;
+  padding: 24px;
   margin-bottom: 20px;
   box-shadow: 0 4px 10px rgba(139, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.combo-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(139, 0, 0, 0.15);
+  border-color: #8b0000;
 }
 
 .combo-header {
@@ -195,11 +204,12 @@
 }
 
 .combo-name {
-  font-family: "Playfair Display", serif;
+  font-family: "Cormorant Garamond", serif;
   color: #8b0000;
-  font-size: 22px;
-  font-weight: 700;
+  font-size: 24px;
+  font-weight: 600;
   margin: 0;
+  letter-spacing: 0.3px;
 }
 
 .combo-price {
@@ -219,11 +229,13 @@
 }
 
 .combo-items li {
-  padding: 8px 0;
+  padding: 9px 0;
   padding-left: 25px;
   position: relative;
-  color: #333;
+  color: #2c2c2c;
   font-size: 15px;
+  line-height: 1.6;
+  font-weight: 400;
 }
 
 .combo-items li::before {
@@ -237,16 +249,18 @@
 
 .footer {
   background: linear-gradient(135deg, #8b0000 0%, #dc143c 100%);
-  padding: 30px;
+  padding: 40px 35px;
   color: white;
   text-align: center;
 }
 
 .footer-title {
-  font-family: "Playfair Display", serif;
-  font-size: 22px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 26px;
   color: #ffd700;
   margin-bottom: 15px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
 .footer-text {
@@ -267,7 +281,60 @@
   margin: 20px auto;
 }
 
+.cta-container {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 25px;
+  flex-wrap: wrap;
+}
+
+.cta-button {
+  font-family: "Inter", sans-serif;
+  background: white;
+  color: #8b0000;
+  padding: 14px 32px;
+  border-radius: 30px;
+  border: 2px solid #ffd700;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.cta-button:hover {
+  background: #ffd700;
+  color: #8b0000;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+}
+
+.cta-button.primary {
+  background: #ffd700;
+  color: #8b0000;
+}
+
+.cta-button.primary:hover {
+  background: white;
+  border-color: #ffd700;
+}
+
 @media (max-width: 768px) {
+  .logo-space {
+    max-width: 240px;
+    margin: 0 auto 15px;
+  }
+
+  .logo-image {
+    max-width: 240px;
+  }
+
   .header h1 {
     font-size: 36px;
   }
@@ -277,7 +344,7 @@
   }
 
   .section-title {
-    font-size: 24px;
+    font-size: 26px;
   }
 
   .menu-item {
@@ -303,5 +370,12 @@
   .combo-price {
     font-size: 20px;
     padding: 6px 16px;
+  }
+
+  .cta-button {
+    width: 100%;
+    justify-content: center;
+    padding: 12px 24px;
+    font-size: 15px;
   }
 }

@@ -198,6 +198,16 @@ const ChristmasMenu = () => {
           <p className="footer-text">
             💰 Se requiere un <span className="highlight">50% de adelanto</span>
           </p>
+
+          <div className="cta-container">
+            <a href="tel:8495357777" className="cta-button primary">
+              📞 Llamar Ahora
+            </a>
+            <a href="https://wa.me/18495357777" target="_blank" rel="noopener noreferrer" className="cta-button">
+              💬 WhatsApp
+            </a>
+          </div>
+
           <div className="decorative-line"></div>
           <p className="footer-text" style={{ marginTop: '20px', fontSize: '14px' }}>
             ¡Haz de tu Navidad un momento especial con La Cocina de Lucy! 🎄✨
