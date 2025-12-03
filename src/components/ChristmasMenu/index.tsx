@@ -1,5 +1,6 @@
 import "./ChristmasMenu.css";
 import logoMenu from "../../assets/logo-menu.png";
+import { Helmet } from "react-helmet";
 
 interface MenuItem {
   name: string;
@@ -152,21 +153,45 @@ const ChristmasMenu = () => {
     },
   ];
 
+  const siteUrl = window.location.origin;
+  const imageUrl = `${siteUrl}/logo-menu.png`;
+
   return (
-    <div className="menu-body">
-      <div className="menu-container">
-        <div className="header">
-          <div className="logo-space">
-            <img
-              src={logoMenu}
-              alt="La Cocina de Lucy"
-              className="logo-image"
-            />
+    <>
+      <Helmet>
+        <title>La Cocina de Lucy - Menú Navideño 2025</title>
+        <meta name="description" content="Descubre nuestro menú navideño 2025. Lasañas, pastelones, ensaladas y más. ¡Haz de tu Navidad un momento especial!" />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`${siteUrl}/menu`} />
+        <meta property="og:title" content="La Cocina de Lucy - Menú Navideño 2025" />
+        <meta property="og:description" content="Descubre nuestro menú navideño 2025. Lasañas, pastelones, ensaladas y más. ¡Haz de tu Navidad un momento especial!" />
+        <meta property="og:image" content={imageUrl} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="La Cocina de Lucy - Menú Navideño 2025" />
+        <meta name="twitter:description" content="Descubre nuestro menú navideño 2025. Lasañas, pastelones, ensaladas y más. ¡Haz de tu Navidad un momento especial!" />
+        <meta name="twitter:image" content={imageUrl} />
+      </Helmet>
+
+      <div className="menu-body">
+        <div className="menu-container">
+          <div className="header">
+            <div className="logo-space">
+              <img
+                src={logoMenu}
+                alt="La Cocina de Lucy"
+                className="logo-image"
+              />
+            </div>
+            <h1>La Cocina de Lucy</h1>
+            <h2>Menú Navideño 2025</h2>
+            <p>✨ SABOR Y TRADICIÓN ✨</p>
           </div>
-          <h1>La Cocina de Lucy</h1>
-          <h2>Menú Navideño 2025</h2>
-          <p>✨ SABOR Y TRADICIÓN ✨</p>
-        </div>
 
         <div className="content">
           <div className="section">
@@ -260,6 +285,7 @@ const ChristmasMenu = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
