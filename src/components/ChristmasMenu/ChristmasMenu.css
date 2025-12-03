@@ -1,0 +1,307 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap");
+
+.menu-body {
+  font-family: "Montserrat", sans-serif;
+  background: linear-gradient(135deg, #8b0000 0%, #dc143c 100%);
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.menu-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: linear-gradient(to bottom, #ffffff 0%, #fff5f5 100%);
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.header {
+  background: linear-gradient(135deg, #8b0000 0%, #b22222 50%, #dc143c 100%);
+  padding: 40px 30px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.header::before {
+  content: "❄";
+  position: absolute;
+  font-size: 100px;
+  opacity: 0.1;
+  top: -20px;
+  left: 20px;
+  color: white;
+}
+
+.header::after {
+  content: "❄";
+  position: absolute;
+  font-size: 80px;
+  opacity: 0.1;
+  bottom: -10px;
+  right: 30px;
+  color: white;
+}
+
+.logo-space {
+  /* background-color: yellow; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20rem;
+  height: 20rem;
+  margin-left: 35%;
+  /* width: 120px;
+  height: 120px;
+  margin: 0 auto 20px;
+  border: 3px dashed rgba(255, 215, 0, 0.5);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 215, 0, 0.7);
+  font-size: 14px;
+  text-align: center;
+  padding: 10px;
+  overflow: hidden; */
+}
+
+.logo-image {
+  /* width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%; */
+}
+
+.header h1 {
+  font-family: "Playfair Display", serif;
+  color: #ffd700;
+  font-size: 48px;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-weight: 700;
+}
+
+.header h2 {
+  font-family: "Playfair Display", serif;
+  color: white;
+  font-size: 32px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+.header p {
+  color: #ffd700;
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+.content {
+  padding: 40px 30px;
+}
+
+.section {
+  margin-bottom: 35px;
+}
+
+.section-title {
+  font-family: "Playfair Display", serif;
+  color: #8b0000;
+  font-size: 28px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #ffd700;
+  display: inline-block;
+  width: 100%;
+}
+
+.subsection {
+  margin-bottom: 25px;
+}
+
+.subsection-title {
+  font-family: "Playfair Display", serif;
+  color: #b22222;
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #f0e6e6;
+  gap: 20px;
+}
+
+.menu-item:last-child {
+  border-bottom: none;
+}
+
+.item-name {
+  flex: 1;
+  font-weight: 600;
+  color: #333;
+  font-size: 16px;
+}
+
+.item-details {
+  color: #666;
+  font-size: 13px;
+  font-style: italic;
+  margin-top: 3px;
+}
+
+.item-price {
+  color: #8b0000;
+  font-weight: 600;
+  font-size: 16px;
+  white-space: nowrap;
+  text-align: right;
+}
+
+.price-label {
+  font-size: 14px;
+  font-weight: 400;
+  color: #666;
+}
+
+.price-separator {
+  margin: 0 8px;
+  color: #999;
+}
+
+.combo-item {
+  background: linear-gradient(135deg, #fff9f9 0%, #ffffff 100%);
+  border: 2px solid #ffd700;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(139, 0, 0, 0.1);
+}
+
+.combo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.combo-name {
+  font-family: "Playfair Display", serif;
+  color: #8b0000;
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.combo-price {
+  color: #8b0000;
+  font-size: 24px;
+  font-weight: 700;
+  background: #ffd700;
+  padding: 8px 20px;
+  border-radius: 25px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.combo-items {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.combo-items li {
+  padding: 8px 0;
+  padding-left: 25px;
+  position: relative;
+  color: #333;
+  font-size: 15px;
+}
+
+.combo-items li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #b22222;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.footer {
+  background: linear-gradient(135deg, #8b0000 0%, #dc143c 100%);
+  padding: 30px;
+  color: white;
+  text-align: center;
+}
+
+.footer-title {
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
+  color: #ffd700;
+  margin-bottom: 15px;
+}
+
+.footer-text {
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 8px;
+}
+
+.highlight {
+  color: #ffd700;
+  font-weight: 600;
+}
+
+.decorative-line {
+  width: 100px;
+  height: 2px;
+  background: #ffd700;
+  margin: 20px auto;
+}
+
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 36px;
+  }
+
+  .header h2 {
+    font-size: 24px;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+
+  .menu-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .item-price {
+    text-align: left;
+    font-size: 15px;
+  }
+
+  .combo-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .combo-name {
+    font-size: 20px;
+  }
+
+  .combo-price {
+    font-size: 20px;
+    padding: 6px 16px;
+  }
+}
