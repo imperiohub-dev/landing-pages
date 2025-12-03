@@ -1,0 +1,286 @@
+@use "../../styles/abstracts" as *;
+@use "sass:color";
+
+// ============================================
+// LANDING PAGE STYLES
+// ============================================
+
+.landing_page {
+  @include display-flex(column, flex-start, center, nowrap);
+  min-height: 100vh;
+  padding: $spacing-xl $spacing-md;
+  background: linear-gradient(
+    180deg,
+    $color-background-primary 0%,
+    $color-background-secondary 100%
+  );
+  gap: $spacing-xxxl;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  // ============================================
+  // HERO SECTION
+  // ============================================
+  &__hero {
+    @include display-flex(column, center, center, nowrap);
+    text-align: center;
+    gap: $spacing-lg;
+    padding: $spacing-xxl 0;
+
+    @include responsive("tablet") {
+      gap: $spacing-xl;
+      padding: $spacing-xxxl 0;
+    }
+  }
+
+  &__title {
+    @include text-title;
+    background: linear-gradient(
+      135deg,
+      $color-text-primary 0%,
+      $color-text-accent 100%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    max-width: 900px;
+    animation: fadeInUp 0.8s ease-out;
+
+    @include responsive("tablet") {
+      font-size: 4.8rem;
+    }
+
+    @include responsive("laptop") {
+      font-size: 5.6rem;
+    }
+  }
+
+  &__title_paragraph {
+    @include text-body;
+    color: $color-text-secondary;
+    max-width: 700px;
+    font-size: $font-size-lg;
+    line-height: $line-height-loose;
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+
+    @include responsive("tablet") {
+      font-size: $font-size-xl;
+    }
+  }
+
+  // ============================================
+  // ASESORIA SECTION
+  // ============================================
+  &__asesoria {
+    @include display-flex(column, center, center, nowrap);
+    background: $color-background-card;
+    border: $border-width-medium solid $color-border-accent;
+    border-radius: $border-radius-xl;
+    padding: $spacing-xl;
+    gap: $spacing-md;
+    text-align: center;
+    box-shadow: $shadow-xl;
+    position: relative;
+    overflow: hidden;
+    animation: fadeInUp 0.8s ease-out 0.4s both;
+    width: 100%;
+    max-width: 800px;
+
+    // Efecto de brillo sutil
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        rgba($color-accent, 0.1),
+        transparent
+      );
+      transition: left $transition-slow;
+    }
+
+    &:hover::before {
+      left: 100%;
+    }
+
+    @include responsive("tablet") {
+      padding: $spacing-xxl;
+      gap: $spacing-lg;
+    }
+  }
+
+  &__subtitle {
+    @include text-title-secondary;
+    color: $color-text-accent;
+
+    @include responsive("tablet") {
+      font-size: 3.6rem;
+    }
+  }
+
+  &__subtitle_paragraph {
+    @include text-body;
+    color: $color-text-secondary;
+    font-size: $font-size-md;
+    line-height: $line-height-loose;
+
+    @include responsive("tablet") {
+      font-size: $font-size-lg;
+    }
+  }
+
+  // ============================================
+  // VENTAJAS SECTION
+  // ============================================
+  &__ventajas {
+    @include display-flex(column, flex-start, stretch, nowrap);
+    gap: $spacing-md;
+    width: 100%;
+    max-width: 900px;
+
+    @include responsive("tablet") {
+      gap: $spacing-lg;
+    }
+  }
+
+  &__ventaja_item {
+    @include display-flex(row, flex-start, flex-start, nowrap);
+    background: $color-background-contrast;
+    border: $border-width-thin solid $color-border-primary;
+    border-radius: $border-radius-lg;
+    padding: $spacing-lg;
+    gap: $spacing-md;
+    transition: all $transition-normal;
+    animation: fadeInUp 0.6s ease-out both;
+    position: relative;
+
+    // Animaci�n escalonada para cada item
+    @for $i from 1 through 10 {
+      &:nth-child(#{$i}) {
+        animation-delay: #{0.6 + ($i * 0.1)}s;
+      }
+    }
+
+    &:hover {
+      transform: translateX(8px);
+      border-color: $color-border-accent;
+      box-shadow: $shadow-lg;
+      background: rgba($color-background-card, 0.8);
+    }
+
+    // Checkmark icon
+    &::before {
+      content: "";
+      @include display-center;
+      min-width: 28px;
+      min-height: 28px;
+      background: $color-accent;
+      color: $color-text-inverse;
+      border-radius: 50%;
+      font-weight: $font-weight-bold;
+      font-size: $font-size-md;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    @include responsive("tablet") {
+      padding: $spacing-xl;
+      gap: $spacing-lg;
+
+      &::before {
+        min-width: 32px;
+        min-height: 32px;
+        font-size: $font-size-lg;
+      }
+    }
+  }
+
+  &__ventaja_text {
+    @include text-body;
+    color: $color-text-primary;
+    line-height: $line-height-relaxed;
+    flex: 1;
+
+    @include responsive("tablet") {
+      font-size: $font-size-lg;
+    }
+  }
+
+  // ============================================
+  // CTA BUTTON
+  // ============================================
+  &__cta {
+    @include text-button;
+    background: linear-gradient(
+      135deg,
+      $color-accent 0%,
+      color.adjust($color-accent, $lightness: -10%) 100%
+    );
+    color: $color-text-inverse;
+    padding: $spacing-lg $spacing-xl;
+    border: none;
+    border-radius: $border-radius-lg;
+    cursor: pointer;
+    font-size: $font-size-md;
+    font-weight: $font-weight-bold;
+    text-transform: none;
+    letter-spacing: 0.02em;
+    box-shadow: $shadow-lg;
+    transition: all $transition-normal;
+    position: relative;
+    overflow: hidden;
+    animation: fadeInUp 0.8s ease-out 1.8s both;
+    margin-top: $spacing-lg;
+
+    // Efecto de brillo en hover
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      background: rgba(white, 0.3);
+      transform: translate(-50%, -50%);
+      transition: width $transition-slow, height $transition-slow;
+    }
+
+    &:hover {
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 20px 40px rgba($color-accent, 0.4);
+
+      &::before {
+        width: 400px;
+        height: 400px;
+      }
+    }
+
+    &:active {
+      transform: translateY(-2px) scale(0.98);
+    }
+
+    @include responsive("tablet") {
+      padding: $spacing-xl $spacing-xxl;
+      font-size: $font-size-lg;
+    }
+  }
+}
+
+// ============================================
+// ANIMATIONS
+// ============================================
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
