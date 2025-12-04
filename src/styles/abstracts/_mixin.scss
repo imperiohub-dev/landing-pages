@@ -1,4 +1,5 @@
 @use "./variables" as v;
+@use "../components/animation" as *;
 @use "sass:map";
 @use "sass:color";
 // Mixin central de display con par�metros personalizables
@@ -23,6 +24,14 @@
 // Variante 2: Display flex en columna centrado
 @mixin display-column-center {
   @include display-flex(column, center, center, nowrap);
+}
+// Variante 3: Display flex en columna con flex-start
+@mixin display-column-flex-start {
+  @include display-flex(column, flex-start, center, nowrap);
+}
+// Variante 3: Display flex en row con flex-start
+@mixin display-row-flex-start {
+  @include display-flex(row, flex-start, center, nowrap);
 }
 
 // ============================================
@@ -64,6 +73,9 @@
     $line-height: v.$line-height-tight,
     $letter-spacing: -0.01em
   );
+  @include responsive("tablet") {
+    font-size: 3.6rem;
+  }
 }
 
 // Variante 3: Subtítulo (H3)
@@ -88,21 +100,31 @@
 @mixin text-body {
   @include text-base(
     $font-family: v.$font-family-secondary,
-    $font-size: v.$font-size-md,
+    $font-size: v.$font-size-lg,
     $font-weight: v.$font-weight-regular,
-    $line-height: v.$line-height-relaxed
+    $line-height: v.$line-height-relaxed,
+    $color: v.$color-text-secondary
   );
+  max-width: 700px;
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+
+  @include responsive("tablet") {
+    font-size: v.$font-size-xl;
+  }
 }
 
 // Variante 6: Párrafo pequeño
 @mixin text-body-small {
   @include text-base(
     $font-family: v.$font-family-secondary,
-    $font-size: v.$font-size-sm,
+    $font-size: v.$font-size-md,
     $font-weight: v.$font-weight-regular,
-    $line-height: v.$line-height-relaxed,
+    $line-height: v.$line-height-loose,
     $color: v.$color-text-secondary
   );
+  @include responsive("tablet") {
+    font-size: v.$font-size-lg;
+  }
 }
 
 // Variante 7: Texto de caption/label
