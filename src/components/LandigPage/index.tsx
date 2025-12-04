@@ -25,6 +25,15 @@ const LandingPage: React.FC = () => {
       "Te daré un plan concreto para escalar tu adquisición de clientes sin depender de recomendaciones",
     ],
   };
+  const handeltWhatsApp = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+    const mensaje =
+      "¡Hola! Estoy interesado en la asesoría gratuita valorada en $120.";
+    const msgEncoded = encodeURIComponent(mensaje);
+    const ws = `https://wa.me/4917684009679?text=${msgEncoded}`;
+    window.open(ws, "_blank", "noopener,noreferrer");
+  };
   return (
     <div className={style.landing_page}>
       {/* Hero Section - Titulo Principal */}
@@ -55,7 +64,7 @@ const LandingPage: React.FC = () => {
       </section>
 
       {/* CTA Button */}
-      <button className={style.landing_page__cta}>
+      <button onClick={handeltWhatsApp} className={style.landing_page__cta}>
         Quiero mi asesoría gratuita ahora →
       </button>
     </div>
