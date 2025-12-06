@@ -10,7 +10,9 @@ interface LandingPageType {
   subtitleP: string;
   ventajas: VentajasType[];
 }
+
 const LandingPage: React.FC = () => {
+  const whatsappId = "whatsapp_cta_button";
   const landingPage: LandingPageType = demo;
   const handeltWhatsApp = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
@@ -20,6 +22,17 @@ const LandingPage: React.FC = () => {
     const msgEncoded = encodeURIComponent(mensaje);
     const ws = `https://wa.me/4917684009679?text=${msgEncoded}`;
     window.open(ws, "_blank", "noopener,noreferrer");
+  };
+  const CtaButton = () => {
+    return (
+      <button
+        id={whatsappId}
+        onClick={handeltWhatsApp}
+        className={style.landing_page__cta}
+      >
+        Quiero mi asesoría gratuita ahora →
+      </button>
+    );
   };
   return (
     <div className={style.landing_page}>
@@ -39,9 +52,7 @@ const LandingPage: React.FC = () => {
         </p>
       </section>
       {/* CTA Button */}
-      <button onClick={handeltWhatsApp} className={style.landing_page__cta}>
-        Quiero mi asesoría gratuita ahora →
-      </button>
+      {CtaButton()}
       {/* Ventajas Section */}
       <section className={style.landing_page__ventajas}>
         {landingPage.ventajas.map((ventaja, index) => {
@@ -54,9 +65,8 @@ const LandingPage: React.FC = () => {
       </section>
 
       {/* CTA Button */}
-      <button onClick={handeltWhatsApp} className={style.landing_page__cta}>
-        Quiero mi asesoría gratuita ahora →
-      </button>
+      {/* CTA Button */}
+      {CtaButton()}
     </div>
   );
 };
