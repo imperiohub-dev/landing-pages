@@ -13,37 +13,20 @@ const ChristmasMenuV2 = () => {
   return (
     <>
       <Helmet>
-        <title>La Cocina de Lucy - Menú Navideño 2025</title>
-        <meta
-          name="description"
-          content="Descubre nuestro menú navideño 2025. Lasañas, pastelones, ensaladas y más. ¡Haz de tu Navidad un momento especial!"
-        />
+        <title>Menú Navideño 2025 - La Cocina de Lucy</title>
+        <meta name="description" content="Descubre nuestro delicioso menú navideño 2025. Platos tradicionales llenos de sabor y tradición para tu celebración." />
 
-        {/* Open Graph / Facebook */}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={`${siteUrl}/menu`} />
-        <meta
-          property="og:title"
-          content="La Cocina de Lucy - Menú Navideño 2025"
-        />
-        <meta
-          property="og:description"
-          content="Descubre nuestro menú navideño 2025. Lasañas, pastelones, ensaladas y más. ¡Haz de tu Navidad un momento especial!"
-        />
+        {/* OPEN GRAPH */}
+        <meta property="og:title" content="Menú Navideño 2025 - La Cocina de Lucy" />
+        <meta property="og:description" content="Descubre nuestro delicioso menú navideño 2025. Platos tradicionales llenos de sabor y tradición para tu celebración." />
         <meta property="og:image" content={imageUrl} />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
+        <meta property="og:url" content={siteUrl} />
+        <meta property="og:type" content="website" />
 
-        {/* Twitter */}
+        {/* TWITTER CARD */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="La Cocina de Lucy - Menú Navideño 2025"
-        />
-        <meta
-          name="twitter:description"
-          content="Descubre nuestro menú navideño 2025. Lasañas, pastelones, ensaladas y más. ¡Haz de tu Navidad un momento especial!"
-        />
+        <meta name="twitter:title" content="Menú Navideño 2025 - La Cocina de Lucy" />
+        <meta name="twitter:description" content="Descubre nuestro delicioso menú navideño 2025. Platos tradicionales llenos de sabor y tradición para tu celebración." />
         <meta name="twitter:image" content={imageUrl} />
       </Helmet>
 
