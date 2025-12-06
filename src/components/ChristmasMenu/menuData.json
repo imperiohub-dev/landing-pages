@@ -1,0 +1,145 @@
+{
+  "menuSections": [
+    {
+      "title": "Lasañas",
+      "emoji": "🍝",
+      "items": [
+        {
+          "name": "Lasaña de Res",
+          "priceSmall": "RD$1,300",
+          "priceLarge": "RD$2,000"
+        },
+        {
+          "name": "Lasaña de Pollo",
+          "priceSmall": "RD$1,500",
+          "priceLarge": "RD$2,300"
+        }
+      ]
+    },
+    {
+      "title": "Pastelones",
+      "emoji": "🍽️",
+      "items": [
+        {
+          "name": "Pastelón de Plátano Maduro",
+          "priceSmall": "RD$1,200",
+          "priceLarge": "RD$1,900"
+        },
+        {
+          "name": "Pastelón de Papa",
+          "priceSmall": "RD$1,000",
+          "priceLarge": "RD$1,700"
+        }
+      ]
+    },
+    {
+      "title": "Ensaladas",
+      "emoji": "🥗",
+      "items": [
+        {
+          "name": "Ensalada Rusa",
+          "details": "blanca, roja o mixta",
+          "price": "RD$800"
+        },
+        {
+          "name": "Ensalada de Pasta",
+          "price": "RD$800"
+        }
+      ]
+    },
+    {
+      "title": "Arroces",
+      "emoji": "🍚",
+      "items": [
+        {
+          "name": "Arroz Navideño con nueces",
+          "details": "5 lb",
+          "price": "RD$900"
+        },
+        {
+          "name": "Moro de Guandules",
+          "details": "5 lb",
+          "price": "RD$750"
+        }
+      ]
+    },
+    {
+      "title": "Carnes",
+      "emoji": "🍖",
+      "items": [
+        {
+          "name": "Cerdo asado por libra",
+          "details": "mínimo 5 lb",
+          "price": "RD$600"
+        },
+        {
+          "name": "Pavo o Pollo en Salsa Ragú",
+          "details": "Bandeja pequeña",
+          "price": "RD$1,100"
+        }
+      ]
+    },
+    {
+      "title": "Otros",
+      "emoji": "⭐",
+      "items": [
+        {
+          "name": "Niños Envueltos",
+          "details": "12 unidades",
+          "price": "RD$900"
+        }
+      ]
+    }
+  ],
+  "combos": [
+    {
+      "name": "Tradicional",
+      "items": [
+        "Lasaña de Res (pequeña)",
+        "Ensalada Rusa",
+        "Arroz Navideño (5 lb)"
+      ],
+      "price": "RD$2,800"
+    },
+    {
+      "name": "Cena Premium",
+      "items": [
+        "Lasaña de Pollo (pequeña)",
+        "Ensalada de Pasta",
+        "Moro de Guandules (5 lb)",
+        "2 lb de Cerdo Asado"
+      ],
+      "price": "RD$4,300"
+    },
+    {
+      "name": "Familia Grande",
+      "items": [
+        "Lasaña de Res (grande)",
+        "Ensalada Rusa",
+        "Moro de Guandules (5 lb)",
+        "Niños Envueltos (12u)"
+      ],
+      "price": "RD$3,950"
+    },
+    {
+      "name": "Navideño Especial",
+      "items": [
+        "Lasaña de Pollo (grande)",
+        "Ensalada Rusa",
+        "Arroz Navideño (5 lb)",
+        "Pavo/Pollo en Salsa Ragú"
+      ],
+      "price": "RD$5,000"
+    },
+    {
+      "name": "Antojos Mixtos",
+      "items": [
+        "Pastelón de Plátano (pequeño)",
+        "Pastelón de Papa (pequeño)",
+        "Ensalada de Pasta",
+        "Arroz Navideño (5 lb)"
+      ],
+      "price": "RD$3,700"
+    }
+  ]
+}

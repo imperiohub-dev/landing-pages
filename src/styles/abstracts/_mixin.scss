@@ -2,6 +2,20 @@
 @use "../components/animation" as *;
 @use "sass:map";
 @use "sass:color";
+// ============================================
+// RESPONSIVE MIXIN
+// ============================================
+
+// Mixin responsive mobile-first
+@mixin responsive($breakpoint) {
+  @if map.has-key(v.$breakpoints, $breakpoint) {
+    @media (min-width: map.get(v.$breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "El breakpoint '#{$breakpoint}' no existe. Breakpoints disponibles: #{map.keys($breakpoints)}";
+  }
+}
 // Mixin central de display con par�metros personalizables
 @mixin display-flex(
   $direction: row,
@@ -184,20 +198,5 @@
 
   &:hover {
     opacity: 0.8;
-  }
-}
-
-// ============================================
-// RESPONSIVE MIXIN
-// ============================================
-
-// Mixin responsive mobile-first
-@mixin responsive($breakpoint) {
-  @if map.has-key(v.$breakpoints, $breakpoint) {
-    @media (min-width: map.get(v.$breakpoints, $breakpoint)) {
-      @content;
-    }
-  } @else {
-    @warn "El breakpoint '#{$breakpoint}' no existe. Breakpoints disponibles: #{map.keys($breakpoints)}";
   }
 }
